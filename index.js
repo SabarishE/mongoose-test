@@ -9,9 +9,6 @@ import router from "./routes/users.js";
 //change the port from 3000 to both local and heroku compatible  port, here PORT is a variable
 const PORT = process.env.PORT || 5000;
 
-
-
-
 const app=express();
 
 app.use(express.json());
