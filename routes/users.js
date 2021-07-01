@@ -6,12 +6,7 @@ const router =express.Router();
 
 // accessing the userlist DB
 
-router.get("/",(req,res)=>{
 
-  
-  res.send("Heroku is deployed");
-  
-})
 router.get("/",async(req,res)=>{
 
     const users = await User.find();
