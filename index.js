@@ -24,7 +24,8 @@ console.log("hi");
 // mongodb://localhost/userlist
 // new url from mongo atlas (cluster > connect > connect your application > copy string)
 // change password and change database name to userlist in last block of new url, after slash
-const url= "mongodb+srv://SabarishE:sabarishe@cluster0.eeimf.mongodb.net/userlist";
+// "mongodb+srv://SabarishE:sabarishe@cluster0.eeimf.mongodb.net/userlist"
+const url= process.env.MONGODB_URI || "mongodb://localhost/userlist";
 mongoose.connect(url,{useNewUrlParser:true});
 
 const con=mongoose.connection;
