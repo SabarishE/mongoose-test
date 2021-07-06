@@ -77,8 +77,6 @@ router.delete("/:id",async(req,res)=>{
 
 })
 
-
-
 export default router;
 
 const inDBstoredPassword="password@123";
