@@ -38,7 +38,8 @@ con.on("open",()=>console.log("MongoDB in connected"));
 // router is used to access the DB
 
 app.get("/",(req,res)=>{
-res.send("Heroku is deployed");
+res.send("Heroku is deployed (mongoose-test)");
+console.log("Heroku is deployed (mongoose-test)");
   })
 
 

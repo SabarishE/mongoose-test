@@ -79,31 +79,3 @@ router.delete("/:id",async(req,res)=>{
 
 export default router;
 
-const inDBstoredPassword="password@123";
-// happens during sign up only
-// 10 rounds of salting is default
-async function genHash(){
-
-  const password ="$2b$10$82TwaQVQjgbvlKg7Y/0EZegFDtxqIoLLXSuR6DvEePPNQ0KZCKmvm";
-  const salt=await bcrypt.genSalt(10);
-  const passwordHash =await bcrypt.hash(password,salt);
-  console.log("salt :"+salt);
-  console.log("passwordHash :" +passwordHash);
-}
-
-genHash();
-
-async function verifyUser(){
-
-  const userpassword="password@123";
-  const isMatch=await bcrypt.compare(inDBstoredPassword,userpassword);
-
-  if(!isMatch){
-    console.log("invalid");
-  }
-  else{
-    console.log("successful");
-  }
-}
-
-verifyUser();
